@@ -1,16 +1,9 @@
-"use client"
-
 import React from 'react';
-import { trpc } from '@/trpc/client';
 
-const page = () => {
-  const { data, isLoading } = trpc.user.createOrGetUser.useQuery();
+export default function HomePage() {
   return (
-    <div>
-      {
-      isLoading ? "Loading..." : data?.firstName}
+    <div style={{ textAlign: 'center', marginTop: 40 }}>
+      <h1>Bienvenue sur l'accueil&nbsp;!</h1>
     </div>
-  )
+  );
 }
-
-export default page
